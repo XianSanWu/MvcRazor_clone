@@ -166,9 +166,11 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\RazorScore\Scores.cshtml" />
     <Content Include="Views\RazorScore\ScoresRazor.cshtml" />
+    <Content Include="Views\RazorScore\ScoresRazorPure.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\ScoresRazorPure\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

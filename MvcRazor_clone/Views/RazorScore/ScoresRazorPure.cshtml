@@ -1,8 +1,25 @@
-﻿@model IEnumerable<MvcRazor_clone.Models.Student>
+﻿@using MvcRazor_clone.Models;
+@model IEnumerable<MvcRazor_clone.Models.Student>
 
 @{
-    ViewBag.Title = "ScoresRazor";
+    ViewBag.Title = "ScoresRazorPure";
+    //計算所有學生總分
+    var Students = from s in Model
+                   select new Student
+                   {
+                       Id = s.Id,
+                       Name = s.Name,
+                       Chinese = s.Chinese,
+                       English = s.English,
+                       Math = s.Math,
+                       Total = s.Chinese + s.English + s.Math
+                   };
+
+
+    //找出最高總分
+    int topScore = Students.Max(s => s.Total);
 }
+
 
 <div class="jumbotron alert-success">
     <h2>學生期中考成績</h2>
@@ -164,3 +181,4 @@
             content: ' (總分排名第一)';
         }
 </style>
+

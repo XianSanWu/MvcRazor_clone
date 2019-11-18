@@ -9,7 +9,7 @@ namespace MvcRazor_clone.Models
     public class Student
     {
         [Display(Name = "學號")]
-        //[DisplayFormat(DataFormatString ="{0:0000}", ApplyFormatInEditMode =false)]
+        [DisplayFormat(DataFormatString ="{0:0000}", ApplyFormatInEditMode =false)]
         public int Id { get; set; }
         [Display(Name = "姓名")]
         public string Name { get; set; }
